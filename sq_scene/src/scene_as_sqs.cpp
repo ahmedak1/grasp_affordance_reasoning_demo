@@ -320,7 +320,7 @@ int main (int argc, char ** argv) {
   scene_as_sqs.scene_segmentation.th_min_points_in_obj = 100;
   scene_as_sqs.scene_segmentation.th_max_points_in_obj = 250000;
 
-  boost::function<void (const pcl::PointCloud<PointT>::ConstPtr&)> f = boost::bind(&SceneAsSQs::camera_cb, &scene_as_sqs, _1);
+  boost::function<void (const pcl::PointCloud<PointT>::ConstPtr&)> f = boost::bind(&SceneAsSQs::camera_cb, &scene_as_sqs, std::placeholders::_1);
 
   bool offline = (pcl::console::find_switch (argc, argv, "-offline"));
   if (offline) {
