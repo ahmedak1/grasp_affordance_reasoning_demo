@@ -108,7 +108,7 @@ void SceneAsSQs::approximateObjects() {
   // transformation_centroid_2(2, 2) = -1;
   // pcl::transformPointCloud(*cloud_in, *cloud_in, transformation_centroid_2);
   // // put back
-  // transformation_centroid.translation() << middle_x, middle_y, middle_z;
+  // transformation_cent_54_roid.translation() << middle_x, middle_y, middle_z;
   // pcl::transformPointCloud(*cloud_in, *cloud_in, transformation_centroid);
   //
   // char buffer_ch[50];

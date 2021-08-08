@@ -6,6 +6,7 @@
 #include <cmath>
 #include <limits.h>
 #include <boost/format.hpp>
+#include <boost/thread.hpp>
 
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
@@ -66,7 +67,7 @@ public:
 
 private:
   //pcl::visualization::PCLVisualizer::Ptr viewer;
-  boost::mutex cloud_mutex;
+  boost::signals2::mutex cloud_mutex;
 };
 
 // palette
